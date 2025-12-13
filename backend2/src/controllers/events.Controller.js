@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Point to your data file
-const FILENAME = path.join(__dirname, "../data/events.json");
+const FILENAME = "events.json";
 
 export const getEvents = (req, res) => {
   try {
