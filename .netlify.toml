@@ -9,8 +9,7 @@
 [context.production.environment]
   NODE_ENV = "production"
 
-# SPA redirect: ensures any unknown route serves index.html
-[[redirects]]
+  [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
