@@ -6,7 +6,7 @@ export default function FeaturedRooms({ tier = "premium" }) {
   const [featuredRooms, setFeaturedRooms] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/rooms")
+    fetch("https://luxestay-hotel.onrender.com/api/rooms")
       .then((res) => res.json())
       .then((data) => {
         // pick top 3 rooms as featured
