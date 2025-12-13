@@ -16,7 +16,7 @@ export default function Rooms({ tier = "premium" }) {
 
   // Fetch rooms from backend2
   useEffect(() => {
-    fetch("http://localhost:5000/api/rooms")
+    fetch("https://luxestay-hotel.onrender.com/api/rooms")
       .then((res) => res.json())
       .then((data) => setRooms(data))
       .catch((err) => console.error("Failed to fetch rooms:", err));

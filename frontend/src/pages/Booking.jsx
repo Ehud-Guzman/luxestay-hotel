@@ -44,7 +44,7 @@ export default function BookAppointment() {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      const response = await axios.post("http://localhost:5000/api/appointments", form);
+      const response = await axios.post("https://luxestay-hotel.onrender.com/api/appointments", form);
       
       setStatus("success");
       setForm({

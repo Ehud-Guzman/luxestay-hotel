@@ -32,7 +32,7 @@ export default function Admin() {
   const fetchAppointments = async (query = "") => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:5000/api/appointments${query ? `?q=${query}` : ""}`);
+      const res = await axios.get(`https://luxestay-hotel.onrender.com/api/appointments${query ? `?q=${query}` : ""}`);
       setAppointments(res.data);
       updateStats(res.data);
     } catch (err) {
@@ -58,7 +58,7 @@ export default function Admin() {
 
   const updateStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/appointments/${id}/status`, { status });
+      await axios.put(`https://luxestay-hotel.onrender.com/api/appointments/${id}/status`, { status });
       setAppointments(prev => prev.map(a => (a.id === id ? { ...a, status } : a)));
       updateStats(appointments.map(a => a.id === id ? { ...a, status } : a));
     } catch (error) {
@@ -71,7 +71,7 @@ export default function Admin() {
     if (!window.confirm("Are you sure you want to delete this appointment?")) return;
     
     try {
-      await axios.delete(`http://localhost:5000/api/appointments/${id}`);
+      await axios.delete(`https://luxestay-hotel.onrender.com/api/appointments/${id}`);
       setAppointments(prev => prev.filter(a => a.id !== id));
       updateStats(appointments.filter(a => a.id !== id));
     } catch (error) {
