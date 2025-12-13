@@ -1,0 +1,84 @@
+{
+  "basic": {
+    "name": "Basic",
+    "theme": {
+      "colors": {
+        "primary": "brand-navy",
+        "secondary": "brand-gold",
+        "text": "brand-ivory"
+      }
+    },
+    "navigation": {
+      "links": [
+        { "name": "Home", "href": "/" },
+        { "name": "Rooms", "href": "/rooms" },
+        { "name": "About", "href": "/about" },
+        { "name": "Contact", "href": "/contact" }
+      ],
+      "showBookNow": false
+    },
+    "content": {
+      "gallery": false,
+      "dining": false,
+      "events": false,
+      "blog": false
+    }
+  },
+
+  "standard": {
+    "name": "Standard",
+    "theme": {
+      "colors": {
+        "primary": "brand-navy",
+        "secondary": "brand-gold",
+        "text": "brand-ivory"
+      }
+    },
+    "navigation": {
+      "links": [
+        { "name": "Home", "href": "/" },
+        { "name": "Rooms", "href": "/rooms" },
+        { "name": "Gallery", "href": "/gallery" },
+        { "name": "About", "href": "/about" },
+        { "name": "Contact", "href": "/contact" }
+      ],
+      "showBookNow": true
+    },
+    "content": {
+      "gallery": true,
+      "dining": false,
+      "events": false,
+      "blog": false
+    }
+  },
+
+  "premium": {
+    "name": "Premium",
+    "theme": {
+      "colors": {
+        "primary": "brand-navy",
+        "secondary": "brand-gold",
+        "text": "brand-ivory"
+      }
+    },
+    "navigation": {
+      "links": [
+        { "name": "Home", "href": "/" },
+        { "name": "Rooms", "href": "/rooms" },
+        { "name": "Gallery", "href": "/gallery" },
+        { "name": "Dining", "href": "/dining" },
+        { "name": "Events", "href": "/events" },
+        { "name": "About", "href": "/about" },
+        { "name": "Contact", "href": "/contact" },
+        { "name": "Blog", "href": "/blog" }
+      ],
+      "showBookNow": true
+    },
+    "content": {
+      "gallery": true,
+      "dining": true,
+      "events": true,
+      "blog": true
+    }
+  }
+}

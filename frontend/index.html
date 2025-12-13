@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0" />
+    <meta name="theme-color" content="#1a365d">
+    
+    <!-- Primary Meta Tags -->
+    <title>Luxury Hotel & Resort | Premium Accommodations</title>
+    <meta name="description" content="Experience unparalleled luxury at our 5-star hotel. Featuring world-class amenities, fine dining, and exceptional service in a breathtaking location.">
+    <meta name="keywords" content="luxury hotel, resort, 5-star accommodation, fine dining, spa, wedding venue, business hotel">
+    <meta name="author" content="Hotel Name">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourhotelwebsite.com/">
+    <meta property="og:title" content="Luxury Hotel & Resort | Premium Accommodations">
+    <meta property="og:description" content="Experience unparalleled luxury at our 5-star hotel. Featuring world-class amenities, fine dining, and exceptional service.">
+    <meta property="og:image" content="https://yourhotelwebsite.com/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Luxury hotel lobby and accommodations">
+    <meta property="og:site_name" content="Hotel Name">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourhotelwebsite.com/">
+    <meta name="twitter:title" content="Luxury Hotel & Resort | Premium Accommodations">
+    <meta name="twitter:description" content="Experience unparalleled luxury at our 5-star hotel.">
+    <meta name="twitter:image" content="https://yourhotelwebsite.com/images/twitter-image.jpg">
+    <meta name="twitter:creator" content="@hotelname">
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="application-name" content="Hotel Name">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Hotel Name">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Icons & Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#1a365d">
+    
+    <!-- Apple Splash Screen Images (Optional but recommended) -->
+    <link rel="apple-touch-startup-image" href="/splash/apple-splash-2048-2732.jpg" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/splash/apple-splash-1668-2388.jpg" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="/splash/apple-splash-1536-2048.jpg" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourhotelwebsite.com/">
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Hotel Name",
+      "description": "Experience unparalleled luxury at our 5-star hotel.",
+      "url": "https://yourhotelwebsite.com/",
+      "logo": "https://yourhotelwebsite.com/logo.png",
+      "image": "https://yourhotelwebsite.com/images/hotel-exterior.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Luxury Avenue",
+        "addressLocality": "City",
+        "addressRegion": "State",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-800-123-4567",
+      "priceRange": "$$$",
+      "amenityFeature": ["Free WiFi", "Swimming Pool", "Spa", "Fitness Center", "Restaurant"],
+      "starRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      }
+    }
+    </script>
+    
+    <!-- Preconnect for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Google Fonts for premium styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/src/main.jsx" as="script">
+    
+    <!-- Security Headers (would also need to be configured in server) -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  </head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => console.log('Service Worker registered'))
+            .catch(err => console.log('Service Worker registration failed'));
+        });
+      }
+    </script>
+  </body>
+</html>

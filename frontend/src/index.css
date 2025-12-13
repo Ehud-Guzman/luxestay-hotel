@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations for navbar */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.navbar-premium-effect {
+  background: linear-gradient(
+    90deg,
+    #0B1C2C 0%,
+    #0f2438 25%,
+    #0B1C2C 50%,
+    #0f2438 75%,
+    #0B1C2C 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 8s infinite linear;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, transform, box-shadow;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}

@@ -1,0 +1,62 @@
+export const events = [
+  {
+    id: 1,
+    image: "/images/gallery/events/ballroom-wedding.jpg",
+    name: "Grand Wedding",
+    type: "Weddings",
+    description: "Host your dream wedding in our elegant ballroom with bespoke decor and catering.",
+    priceRange: "KES 100,000 - 150,000",
+    capacity: "Up to 200 guests",
+    height: "h-80"
+  },
+  {
+    id: 2,
+    image: "/images/hero.jpg",
+    name: "Corporate Summit",
+    type: "Corporate",
+    description: "Elevate your business events with state-of-the-art facilities and tailored menus.",
+    priceRange: "KES 50,000 - 80,000",
+    capacity: "Up to 100 guests",
+    height: "h-96"
+  },
+  {
+    id: 3,
+    image: "/images/gallery/events/year-end-party.jpg",
+    name: "Festive Gala",
+    type: "Seasonal",
+    description: "Celebrate the season with a vibrant gala, featuring live music and gourmet dining.",
+    priceRange: "KES 70,000 - 120,000",
+    capacity: "Up to 150 guests",
+    height: "h-80"
+  },
+  {
+    id: 4,
+    image: "/images/gallery/events/Charity-Auction-Gala-Event.jpg",
+    name: "Charity Ball",
+    type: "Seasonal",
+    description: "An elegant evening dedicated to giving back, with fine dining and entertainment.",
+    priceRange: "KES 80,000 - 120,000",
+    capacity: "Up to 150 guests",
+    height: "h-80"
+  },
+  {
+    id: 5,
+    image: "/images/gallery/events/Conference-setup.jpg",
+    name: "Product Launch",
+    type: "Corporate",
+    description: "Showcase your latest innovations in a sophisticated and professional setting.",
+    priceRange: "KES 60,000 - 100,000",
+    capacity: "Up to 120 guests",
+    height: "h-80"
+  },
+  {
+    id: 6,
+    image: "/images/gallery/events/Wedding-setup.jpg",
+    name: "Destination Wedding",
+    type: "Weddings",
+    description: "Experience a magical wedding at a breathtaking location with full service.",
+    priceRange: "KES 150,000 - 250,000",
+    capacity: "Up to 250 guests",
+    height: "h-96"
+  },
+];

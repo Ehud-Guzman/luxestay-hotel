@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Ehud Guzman",
+    "email": "nyamuehud@gmail.com",
+    "phone": "+254746527253",
+    "service": "Presidential-villa",
+    "roomId": "",
+    "date": "2025-09-26",
+    "time": "21:00",
+    "notes": "I need the best service",
+    "guestCount": "5",
+    "specialRequests": "Minimal noise",
+    "status": "approved"
+  }
+]
