@@ -1,13 +1,17 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: './', // ensures relative paths work in Netlify
+  build: {
+    outDir: 'dist', // match your Netlify publish directory
+  },
   server: {
     watch: {
-      usePolling: true, // fixes reload not triggering in some OS/file systems
+      usePolling: true, // fixes reload issues
     },
-    host: true, // makes it work across devices / network
-    strictPort: true, // keeps same port (optional)
+    host: true, // allows network access
+    strictPort: true, // optional: keeps same port
   },
-})
+});
