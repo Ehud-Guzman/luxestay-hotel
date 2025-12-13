@@ -1,5 +1,4 @@
 [build]
-  # Run npm install with legacy peer deps and build in frontend folder
   command = "npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   publish = "frontend/dist"
 
