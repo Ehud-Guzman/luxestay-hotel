@@ -1,6 +1,13 @@
 import { readJSON, writeJSON } from "../utils.js";
+import path from "path";
+import { fileURLToPath } from "url";
 
-const FILENAME = "events.json";
+// Fix for absolute path in ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Point to your data file
+const FILENAME = path.join(__dirname, "../data/events.json");
 
 export const getEvents = (req, res) => {
   try {
