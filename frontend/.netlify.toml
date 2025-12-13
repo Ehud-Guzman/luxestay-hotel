@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18.17.0"  # Use a compatible Node version
+  NPM_FLAGS = "--legacy-peer-deps=false"
+
+[context.production.environment]
+  NODE_ENV = "production"
+
+  [[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
