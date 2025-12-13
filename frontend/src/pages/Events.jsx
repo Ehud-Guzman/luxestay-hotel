@@ -11,14 +11,26 @@ export default function Events({ tier = "premium" }) {
   const [events, setEvents] = useState([]);
   const showEvents = features[tier]?.content?.events ?? true;
 
-  // Fetch events from backend2
-  useEffect(() => {
-    fetch("https://luxestay-hotel.onrender.com/api/events")
-      .then((res) => res.json())
-      .then((data) => setEvents(data))
-      .catch((err) => console.error("Failed to fetch events:", err));
-  }, []);
+  // Use env variable for backend URL
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
+  // Fetch events from backend
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const res = await fetch(`${API_URL}/api/events`);
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        const data = await res.json();
+        setEvents(data);
+      } catch (err) {
+        console.error("Failed to fetch events:", err);
+      }
+    };
+
+    fetchEvents();
+  }, [API_URL]);
+
+  // Filter events based on search and type
   const filteredEvents = events.filter((event) => {
     const matchesFilter = filter === "all" || event.type === filter;
     const matchesSearch =
