@@ -149,7 +149,7 @@ export default function Footer({ tier = "premium" }) {
           © {new Date().getFullYear()} LuxeStay. All rights reserved. | 
           Designed by{" "}
           <a
-            href="https://glimmerink.netlify.app/"
+            href="https://glimmerink.co.ke"
             className="text-brand-gold hover:text-brand-ivory transition-all duration-300 hover:filter hover:drop-shadow-[0_0_8px_rgba(212,175,55,0.5)] mx-1"
           >
             GlimmerInk Creations
